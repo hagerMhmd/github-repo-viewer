@@ -12,6 +12,7 @@ const AlertProvider = (Props) => {
         rtl={false}
         pauseOnFocusLoss
         pauseOnHover
+        closeOnClick
       />
       {Props.children}
     </>

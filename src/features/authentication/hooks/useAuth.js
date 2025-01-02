@@ -14,10 +14,12 @@ export const useAuth = () => {
       const githubAccessToken = credential.accessToken;
       Cookies.set("accessToken", githubAccessToken);
       Cookies.set("userInfo", JSON.stringify(user.reloadUserInfo));
+      toast.success("Login successful!");
       navigate("/");
       return user;
     } catch (error) {
-      toast.error(error);
+      const errorMessage = error?.message || "An unexpected error occurred";
+      toast.error(errorMessage);
     }
   };
 
