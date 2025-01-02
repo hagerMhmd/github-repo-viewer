@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import PropTypes from "prop-types";
+import Cookies from "js-cookie";
 import Loading from "../common/components/Loading.jsx";
 const Layout = lazy(() => import("@/common/components/Layout.jsx"));
 const LoginPage = lazy(() =>
@@ -15,11 +16,11 @@ const LoginPage = lazy(() =>
 const ReposPage = lazy(() =>
   import("@/features/repositories/components/RepoPage.jsx")
 );
-const isAuthenticated = false;
 const SuspenseFun = ({ children }) => {
   return <Suspense fallback={<Loading />}>{children}</Suspense>;
 };
 const ProtectedRoute = ({ children }) => {
+  const isAuthenticated = Cookies.get("accessToken");
   if (!isAuthenticated) {
     return <Navigate to="/login" />;
   }
