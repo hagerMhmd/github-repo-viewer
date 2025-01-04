@@ -15,7 +15,7 @@ Clone the repository to your local machine using Git:
 
 ```bash
 git clone https://github.com/hagerMhmd/Leads-mart-task.git
-cd Leads-mart-task
+cd github-repo-viewer
 ```
 
 
