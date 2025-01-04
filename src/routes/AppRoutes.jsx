@@ -8,7 +8,9 @@ import {
 } from "react-router-dom";
 import PropTypes from "prop-types";
 import Cookies from "js-cookie";
+
 import Loading from "../common/components/Loading.jsx";
+import NotFound from "../common/components/NotFound.jsx";
 const Layout = lazy(() => import("@/common/components/Layout.jsx"));
 const LoginPage = lazy(() =>
   import("@/features/authentication/components/Login.jsx")
@@ -49,6 +51,7 @@ const AppRoute = () => {
             </SuspenseFun>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );

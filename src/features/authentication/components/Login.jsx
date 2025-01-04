@@ -1,6 +1,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Box, Button, Paper, Typography } from "@mui/material";
-import styles from "../../../common/style/style.js";
+import styles from "@/common/style/style.js";
 import { useAuth } from "../hooks/useAuth.js";
 
 export default function Login() {
