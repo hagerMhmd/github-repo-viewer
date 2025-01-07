@@ -14,7 +14,7 @@ Currently, two official plugins are available:
 Clone the repository to your local machine using Git:
 
 ```bash
-git clone https://github.com/hagerMhmd/Leads-mart-task.git
+git clone https://github.com/hagerMhmd/github-repo-viewer.git
 cd github-repo-viewer
 ```
 
